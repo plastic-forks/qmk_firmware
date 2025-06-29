@@ -10,7 +10,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,
         KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,          KC_ENT,
         KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,          MO(3),
-        MO(2),   KC_LGUI, KC_LALT,                            KC_SPC,                                      KC_RALT, KC_RGUI, KC_RCTL
+        MO(2),   KC_LGUI, KC_LALT,                            LT(4, KC_SPC),                               KC_RALT, KC_RGUI, KC_RCTL
     ),
 
     // BASE Layer - DVORAK
@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_SLSH, KC_EQL,  KC_BSLS,
         KC_LCTL, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_MINS,          KC_ENT,
         KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RSFT,          MO(3),
-        MO(2),   KC_LGUI, KC_LALT,                            KC_SPC,                                      KC_RALT, KC_RGUI, KC_RCTL
+        MO(2),   KC_LGUI, KC_LALT,                            LT(4, KC_SPC),                               KC_RALT, KC_RGUI, KC_RCTL
     ),
 
     // Extended Layer
@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,          KC_INS,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______,                            _______,                                     _______, _______, _______
-      ),
+    ),
 
     // Function Layer
     [3] = LAYOUT_60_ansi_tsangan_split_rshift(
@@ -37,6 +37,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, DF(0),   DF(1),   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, _______, QK_BOOT, _______, _______, _______, _______, _______, _______,          _______,
+        _______, _______, _______,                            _______,                                     _______, _______, _______
+    ),
+
+    // Mouse Layer
+    [4] = LAYOUT_60_ansi_tsangan_split_rshift(
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, MS_ACL2, MS_ACL1, MS_ACL0, _______, MS_WHLU, MS_UP,   _______, _______, _______, _______, _______,
+        _______, _______, _______, MS_BTN2, MS_BTN1, _______, _______, MS_LEFT, MS_DOWN, MS_RGHT, _______, _______,          _______,
+        _______, _______, _______, _______, _______, _______, _______, MS_WHLD, _______, _______, _______, _______,          _______,
         _______, _______, _______,                            _______,                                     _______, _______, _______
     )
 };
